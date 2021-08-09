@@ -7,4 +7,4 @@ before_install:
           - docker build -t new-test-image -f Dockerfile.dev .
 
 script:
-          - docker run new-test-image npm run test -- --coverage
+          - docker run new-test-image npm run test -- -- coverage

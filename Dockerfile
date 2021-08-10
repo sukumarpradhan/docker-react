@@ -1,6 +1,6 @@
 # Base image info
 
-FROM node:alpine as build-phase
+FROM node:alpine
 
 WORKDIR /usr/app
 
@@ -23,4 +23,4 @@ FROM nginx
 
 EXPOSE 80
 
-COPY --from=build-phase /usr/app/build /usr/share/nginx/html
+COPY --from=0 /usr/app/build /usr/share/nginx/html

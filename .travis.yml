@@ -1,6 +1,6 @@
 sudo : required
 
-language: python
+language: go
 
 deploy:
       provider: elasticbeanstalk

@@ -1,6 +1,7 @@
 sudo : required
 
-language: ruby
+script:
+        - echo "success"
 
 deploy:
       provider: elasticbeanstalk

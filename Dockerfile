@@ -1,5 +1,5 @@
 # Base image info
-FROM node:alpine as build-phase
+FROM node:alpine
 WORKDIR /usr/app
 
 # Dependancies info
@@ -13,4 +13,4 @@ RUN npm run build
 # run phase/ nginx phase
 FROM nginx
 EXPOSE 80
-COPY --from=build-phase /usr/app/build /usr/share/nginx/html
+COPY --from=0 /usr/app/build /usr/share/nginx/html
